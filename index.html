@@ -1,0 +1,468 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script type = "text/javascript" src= "so.js" ></script>
+<style>
+ul li:nth-of-type(n+2){ display: none; }
+ul { list-style: none; }
+.main img { Width:256px; heght:auto; }
+#c0 img { Width:100px; heght:auto; }
+.sub img { Width:100px; heght:auto; }
+.sp img { Width:100px; heght:auto; }
+</style>
+
+<table>
+
+<tr valign="middle" style="height:100px;">
+<td align="center">
+<select id="mainweapon">
+	<option default value="c0">メインウェポン</option>
+		<optgroup label="シューター種">
+			<option value="c1">ボールドマーカー</option>
+			<option value="c2">わかばシューター</option>
+			<option value="c3">シャープマーカー</option>
+			<option value="c4">プロモデラー</option>
+			<option value="c5">スプラシューター</option>
+			<option value="c6">.52ガロン</option>
+			<option value="c7">N-ZAP</option>
+			<option value="c8">プライムシューター</option>
+			<option value="c9">.96ガロン</option>
+			<option value="c10">ジェットスイーパー</option>
+			<option value="c11">スペースシューター</option>
+			<option value="c12">L3リールガン</option>
+			<option value="c13">H3リールガン</option>
+			<option value="c14">ボトルガイザー</option>
+		</optgroup>
+		<optgroup label="ブラスター種">
+			<option value="c20">ノヴァブラスター</option>
+			<option value="c21">ホットブラスター/option>
+			<option value="c22">ロングブラスター</option>
+			<option value="c23">クラッシュブラスター</option>
+			<option value="c24">ラピッドブラスター</option>
+			<option value="c25">Rブラスターエリート</option>
+			<option value="c26">S-BLAST</option>
+		</optgroup>
+		<optgroup label="ローラー種">
+			<option value="c30">カーボンローラー</option>
+			<option value="c31">スプラローラー</option>
+			<option value="c32">ダイナモローラー</option>
+			<option value="c33">ヴァリアブルローラー</option>
+			<option value="c34">ワイドローラー</option>
+		</optgroup>
+		<optgroup label="ブラシ種">
+			<option value="c40">パブロ</option>
+			<option value="c41">ホクサイ</option>
+			<option value="c42">フィンセント</option>
+		</optgroup>
+		<optgroup label="チャージャー種">
+			<option value="c50">スクイックリン</option>
+			<option value="c51">スプラチャージャー</option>
+			<option value="c52">リッター4K</option>
+			<option value="c53">14式竹筒銃</option>
+			<option value="c54">ソイチューバー</option>
+			<option value="c55">R-PEN</option>
+		</optgroup>
+		<optgroup label="スロッシャー種">
+			<option value="c60">バケットスロッシャー</option>
+			<option value="c61">ヒッセン</option>
+			<option value="c62">スクリュースロッシャー</option>
+			<option value="c63">オーバーフロッシャー</option>
+			<option value="c64">エクスプロッシャー</option>
+			<option value="c65">モップリン</option>
+		</optgroup>
+		<optgroup label="スピナー種">
+			<option value="c70">スプラスピナー</option>
+			<option value="c71">バレルスピナー</option>
+			<option value="c72">ハイドラント</option>
+			<option value="c73">クーゲルシュライバー</option>
+			<option value="c74">ノーチラス</option>
+			<option value="c75">イグザミナー</option>
+		</optgroup>
+		<optgroup label="マニューバー種">
+			<option value="c80">スパッタリー</option>
+			<option value="c81">スプラマニューバー</option>
+			<option value="c82">ケルビン525</option>
+			<option value="c83">デュアルスイーパー</option>
+			<option value="c84">クアッドホッパー</option>
+			<option value="c85">ガエンFF</option>
+		</optgroup>
+		<optgroup label="シェルター種">
+			<option value="c90">パラシェルター</option>
+			<option value="c91">キャンピングシャルター</option>
+			<option value="c92">スパイガジェット</option>
+			<option value="c93">24式張替傘</option>
+		</optgroup>
+		<optgroup label="ストリンガー種">
+			<option value="c100">トイストリンガー</option>
+			<option value="c101">LACT-450</option>
+			<option value="c102">フルイドV</option>
+		</optgroup>
+		<optgroup label="ワイパー種">
+			<option value="c110">ジムワイパー</option>
+			<option value="c111">ドライブワイパー</option>
+			<option value="c112">デンタルワイパー</option>
+		</optgroup>
+</select>
+</td>
+
+<td align="center">
+<select id="subweapon">
+	<option default value="c299">サブウェポン</option>
+		<option value="c200">スプラッシュボム</option>
+		<option value="c201">キューバンボム</option>
+		<option value="c202">クイックボム</option>
+		<option value="c203">スプリンクラー</option>
+		<option value="c204">スプラッシュシールド</option>
+		<option value="c205">タンサンボム</option>
+		<option value="c206">カーリングボム</option>
+		<option value="c207">ロボットボム</option>
+		<option value="c208">ジャンプビーコン</option>
+		<option value="c209">ポイントセンサー</option>
+		<option value="c210">トラップ</option>
+		<option value="c211">ポイズンミスト</option>
+		<option value="c212">ランマーカー</option>
+		<option value="c213">トーピード</option>
+</select>
+</td>
+
+<td align="center">
+<select id="spweapon">
+	<option default value="c399">スペシャルウェポン</option>
+		<option value="c300">ウルトラショット</option>
+		<option value="c301">グレートバリア</option>
+		<option value="c302">ショクワンダー</option>
+		<option value="c303">マルチミサイル</option>
+		<option value="c304">アメフラシ</option>
+		<option value="c305">ナイスダマ</option>
+		<option value="c306">ホップソナー</option>
+		<option value="c307">キューインキ</option>
+		<option value="c308">メガホンレーザー5.1ch</option>
+		<option value="c309">ジェットパック</option>
+		<option value="c310">ウルトラハンコ</option>
+		<option value="c311">カニタンク</option>
+		<option value="c312">サメライド</option>
+		<option value="c313">トリプルトルネード</option>
+		<option value="c314">エナジースタンド</option>
+		<option value="c315">デコイチラシ</option>
+		<option value="c316">テイオウイカ</option>
+		<option value="c317">ウルトラチャクチ</option>
+		<option value="c318">スミナガシート</option>
+</select>
+</td>
+
+<!--mainweapon-->
+<tr valign="middle" align="center" style="height:300px;">
+<td style="width:300px;">
+<ul>
+<li id = "c0" class="main">
+<img src="image/main_weapon_image/ランダムブキ.png">
+</li>
+<li id = "c1" class="main">
+<img src="image/main_weapon_image/ボールドマーカー.png">
+</li>
+<li id = "c2" class="main">
+<img src="image/main_weapon_image/わかばシューター.png">
+</li>
+<li id = "c3" class="main">
+<img src="image/main_weapon_image/シャープマーカー.png">
+</li>
+<li id = "c4" class="main">
+<img src="image/main_weapon_image/プロモデラー.png">
+</li>
+<li id = "c5" class="main">
+<img src="image/main_weapon_image/スプラシューター.png">
+</li>
+<li id = "c6" class="main">
+<img src="image/main_weapon_image/52ガロン.png">
+</li>
+<li id = "c7" class="main">
+<img src="image/main_weapon_image/N-ZAP.png">
+</li>
+<li id = "c8" class="main">
+<img src="image/main_weapon_image/プライムシューター.png">
+</li>
+<li id = "c9" class="main">
+<img src="image/main_weapon_image/96ガロン.png">
+</li>
+<li id = "c10" class="main">
+<img src="image/main_weapon_image/ジェットスイーパー.png">
+</li>
+<li id = "c11" class="main">
+<img src="image/main_weapon_image/スペースシューター.png">
+</li>
+<li id = "c12" class="main">
+<img src="image/main_weapon_image/L3リールガン.png">
+</li>
+<li id = "c13" class="main">
+<img src="image/main_weapon_image/H3リールガン.png">
+</li>
+<li id = "c14" class="main">
+<img src="image/main_weapon_image/ボトルガイザー.png">
+</li>
+<li id = "c20" class="main">
+<img src="image/main_weapon_image/ノヴァブラスター.png">
+</li>
+<li id = "c21" class="main">
+<img src="image/main_weapon_image/ホットブラスター.png">
+</li>
+<li id = "c22" class="main">
+<img src="image/main_weapon_image/ロングブラスター.png">
+</li>
+<li id = "c23" class="main">
+<img src="image/main_weapon_image/クラッシュブラスター.png">
+</li>
+<li id = "c24" class="main">
+<img src="image/main_weapon_image/ラピッドブラスター.png">
+</li>
+<li id = "c25" class="main">
+<img src="image/main_weapon_image/Rブラスターエリート.png">
+</li>
+<li id = "c26" class="main">
+<img src="image/main_weapon_image/S-BLAST.png">
+</li>
+<li id = "c30" class="main">
+<img src="image/main_weapon_image/カーボンローラー.png">
+</li>
+<li id = "c31" class="main">
+<img src="image/main_weapon_image/スプラローラー.png">
+</li>
+<li id = "c32" class="main">
+<img src="image/main_weapon_image/ダイナモローラー.png">
+</li>
+<li id = "c33" class="main">
+<img src="image/main_weapon_image/ヴァリアブルローラー.png">
+</li>
+<li id = "c34" class="main">
+<img src="image/main_weapon_image/ワイドローラー.png">
+</li>
+<li id = "c40" class="main">
+<img src="image/main_weapon_image/パブロ.png">
+</li>
+<li id = "c41" class="main">
+<img src="image/main_weapon_image/ホクサイ.png">
+</li>
+<li id = "c42" class="main">
+<img src="image/main_weapon_image/フィンセント.png">
+</li>
+<li id = "c50" class="main">
+<img src="image/main_weapon_image/スクイックリン.png">
+</li>
+<li id = "c51" class="main">
+<img src="image/main_weapon_image/スプラチャージャー.png">
+</li>
+<li id = "c52" class="main">
+<img src="image/main_weapon_image/リッター4K.png">
+</li>
+<li id = "c53" class="main">
+<img src="image/main_weapon_image/14式竹筒銃.png">
+</li>
+<li id = "c54" class="main">
+<img src="image/main_weapon_image/ソイチューバー.png">
+</li>
+<li id = "c55" class="main">
+<img src="image/main_weapon_image/R-PEN.png">
+</li>
+<li id = "c60" class="main">
+<img src="image/main_weapon_image/バケットスロッシャー.png">
+</li>
+<li id = "c61" class="main">
+<img src="image/main_weapon_image/ヒッセン.png">
+</li>
+<li id = "c62" class="main">
+<img src="image/main_weapon_image/スクリュースロッシャー.png">
+</li>
+<li id = "c63" class="main">
+<img src="image/main_weapon_image/オーバーフロッシャー.png">
+</li>
+<li id = "c64" class="main">
+<img src="image/main_weapon_image/エクスプロッシャー.png">
+</li>
+<li id = "c65" class="main">
+<img src="image/main_weapon_image/モップリン.png">
+</li>
+<li id = "c70" class="main">
+<img src="image/main_weapon_image/スプラスピナー.png">
+</li>
+<li id = "c71" class="main">
+<img src="image/main_weapon_image/バレルスピナー.png">
+</li>
+<li id = "c72" class="main">
+<img src="image/main_weapon_image/ハイドラント.png">
+</li>
+<li id = "c73" class="main">
+<img src="image/main_weapon_image/クーゲルシュライバー.png">
+</li>
+<li id = "c74" class="main">
+<img src="image/main_weapon_image/ノーチラス.png">
+</li>
+<li id = "c75" class="main">
+<img src="image/main_weapon_image/イグザミナー.png">
+</li>
+<li id = "c80" class="main">
+<img src="image/main_weapon_image/スパッタリー.png">
+</li>
+<li id = "c81" class="main">
+<img src="image/main_weapon_image/スプラマニューバー.png">
+</li>
+<li id = "c82" class="main">
+<img src="image/main_weapon_image/ケルビン525.png">
+</li>
+<li id = "c83" class="main">
+<img src="image/main_weapon_image/デュアルスイーパー.png">
+</li>
+<li id = "c84" class="main">
+<img src="image/main_weapon_image/クアッドホッパー.png">
+</li>
+<li id = "c85" class="main">
+<img src="image/main_weapon_image/ガエンFF.png">
+</li>
+<li id = "c90" class="main">
+<img src="image/main_weapon_image/パラシェルター.png">
+</li>
+<li id = "c91" class="main">
+<img src="image/main_weapon_image/キャンピングシェルター.png">
+</li>
+<li id = "c92" class="main">
+<img src="image/main_weapon_image/スパイガジェット.png">
+</li>
+<li id = "c93" class="main">
+<img src="image/main_weapon_image/24式張替傘.png">
+</li>
+<li id = "c100" class="main">
+<img src="image/main_weapon_image/トライストリンガー.png">
+</li>
+<li id = "c101" class="main">
+<img src="image/main_weapon_image/LACT-450.png">
+</li>
+<li id = "c102" class="main">
+<img src="image/main_weapon_image/フルイドV.png">
+</li>
+<li id = "c110" class="main">
+<img src="image/main_weapon_image/ジムワイパー.png">
+</li>
+<li id = "c111" class="main">
+<img src="image/main_weapon_image/ドライブワイパー.png">
+</li>
+<li id = "c112" class="main">
+<img src="image/main_weapon_image/デンタルワイパー.png">
+</li>
+</ul>
+</td>
+
+<td valign="middle" align="center" style="width:300px;">
+<ul>
+<li id = "c299" class="sub">
+<img src="image/main_weapon_image/ランダムブキ.png">
+</li>
+<li id = "c200" class="sub">
+<img src="image/sub_weapon_image/スプラッシュボム.png">
+</li>
+<li id = "c201" class="sub">
+<img src="image/sub_weapon_image/キューバンボム.png">
+</li>
+<li id = "c202" class="sub">
+<img src="image/main_weapon_image/クイックボム.png">
+</li>
+<li id = "c203" class="sub">
+<img src="image/sub_weapon_image/スプリンクラー.png">
+</li>
+<li id = "c204" class="sub">
+<img src="image/sub_weapon_image/スプラッシュシールド.png">
+</li>
+<li id = "c205" class="sub">
+<img src="image/sub_weapon_image/タンサンボム.png">
+</li>
+<li id = "c206" class="sub">
+<img src="image/sub_weapon_image/カーリングボム.png">
+</li>
+<li id = "c207" class="sub">
+<img src="image/sub_weapon_image/ロボットボム.png">
+</li>
+<li id = "c208" class="sub">
+<img src="image/sub_weapon_image/ジャンプビーコン.png">
+</li>
+<li id = "c209" class="sub">
+<img src="image/sub_weapon_image/ポイントセンサー.png">
+</li>
+<li id = "c210" class="sub">
+<img src="image/sub_weapon_image/トラップ.png">
+</li>
+<li id = "c211" class="sub">
+<img src="image/sub_weapon_image/ポイズンミスト.png">
+</li>
+<li id = "c212" class="sub">
+<img src="image/sub_weapon_image/ラインマーカー.png">
+</li>
+<li id = "c213" class="sub">
+<img src="image/sub_weapon_image/トーピード.png">
+</li>
+</ul>
+</td>
+
+<td valign="middle" align="center" style="width:300px;">
+<ul>
+<li id = "399" class="sp">
+<img src="image/main_weapon_image/ランダムブキ.png">
+</li>
+<li id = "c300" class="sp">
+<img src="image/sp_weapon_image/ウルトラショット.png">
+</li>
+<li id = "c301" class="sp">
+<img src="image/sp_weapon_image/グレートバリア.png">
+</li>
+<li id = "c302" class="sp">
+<img src="image/sp_weapon_image/ショクワンダー.png">
+</li>
+<li id = "c303" class="sp">
+<img src="image/sp_weapon_image/マルチミサイル.png">
+</li>
+<li id = "c304" class="sp">
+<img src="image/sp_weapon_image/アメフラシ.png">
+</li>
+<li id = "c305" class="sp">
+<img src="image/sp_weapon_image/ナイスダマ.png">
+</li>
+<li id = "c306" class="sp">
+<img src="image/sp_weapon_image/ホップソナー.png">
+</li>
+<li id = "c307" class="sp">
+<img src="image/sp_weapon_image/キューインキ.png">
+</li>
+<li id = "c308" class="sp">
+<img src="image/sp_weapon_image/メガホンレーザー51ch.png">
+</li>
+<li id = "c309" class="sp">
+<img src="image/sp_weapon_image/ジェットパック.png">
+</li>
+<li id = "c310" class="sp">
+<img src="image/sp_weapon_image/ウルトラハンコ.png">
+</li>
+<li id = "c311" class="sp">
+<img src="image/sp_weapon_image/カニタンク.png">
+</li>
+<li id = "c312" class="sp">
+<img src="image/sp_weapon_image/サメライド.png">
+</li>
+<li id = "c313" class="sp">
+<img src="image/sp_weapon_image/トリプルトルネード.png">
+</li>
+<li id = "c314" class="sp">
+<img src="image/sp_weapon_image/エナジースタンド.png">
+</li>
+<li id = "c315" class="sp">
+<img src="image/sp_weapon_image/デコイチラシ.png">
+</li>
+<li id = "c316" class="sp">
+<img src="image/sp_weapon_image/テイオウイカ.png">
+</li>
+<li id = "c317" class="sp">
+<img src="image/sp_weapon_image/ウルトラチャクチ.png">
+</li>
+<li id = "c318" class="sp">
+<img src="image/sp_weapon_image/スミナガシート.png">
+</li>
+</ul>
+</td>
+
+</tr>
+</table>
+
+</html>
